@@ -31,28 +31,59 @@ It provides authentication, chat handling with multiple personas, history manage
 ## 📂 Project Structure
 
 ```
-chat-backend/
-│── app/
-│   ├── main.py                 # FastAPI entrypoint
-│   ├── core/
-│   │   ├── auth.py             # JWT auth & password utils
-│   │   └── config.py           # Config & constants (personas, settings)
-│   ├── services/
-│   │   ├── chat_service.py     # Chat logic + history
-│   │   └── analytics_service.py # Analytics summary
-│   ├── endpoints/
-│   │   ├── auth.py             # /auth routes
-│   │   ├── chat.py             # /chat routes
-│   │   └── analytics.py        # /analytics routes
-│   └── __init__.py
+CHAT-BACKEND/
+│── .venv/                    # Python virtual environment (ignored in Git)
+│── .vscode/                  # VS Code configs
 │
-│── data/
-│   └── chat_logs.json          # Stored chats (auto-created)
+│── app/                      # Main FastAPI application
+│   ├── api_v1/endpoints/     # API route definitions
+│   │   ├── __init__.py
+│   │   ├── analytics.py      # Analytics endpoints (/analytics)
+│   │   ├── auth.py           # Authentication endpoints (/auth)
+│   │   ├── chat.py           # Chat endpoints (/chat)
+│   │   └── healthy.py        # Health-check endpoint (/health)
+│   │
+│   ├── core/                 # Core utilities
+│   │   ├── __init__.py
+│   │   ├── auth.py           # JWT & password hashing
+│   │   ├── config.py         # Config values (personas, settings)
+│   │   ├── logging_config.py # Logging configuration
+│   │   └── storage.py        # JSON / file storage utils
+│   │
+│   ├── middlewares/          # Middlewares (extra request handlers)
+│   │   ├── __init__.py
+│   │   └── timing.py         # Request timing middleware
+│   │
+│   ├── models/               # Data models / schemas
+│   │   └── schemas.py        # Pydantic schemas (User, Chat, Analytics)
+│   │
+│   ├── services/             # Business logic
+│   │   ├── __init__.py
+│   │   ├── interfaces/       # Interfaces for future DB/service layers
+│   │   ├── analytics_service.py # Analytics logic
+│   │   ├── chat_service.py   # Chat + persona logic
+│   │   └── history.py        # Chat history management
+│   │
+│   ├── __init__.py
+│   └── main.py               # FastAPI entrypoint
 │
-│── requirements.txt
-│── Dockerfile
-│── docker-compose.yml
-│── README.md                   # (this file)
+│── data/                     # Storage/data folder
+│   ├── histories/            # Persona chat history files
+│   ├── logs/                 # Log files
+│   └── chat_logs.json        # JSON storage for chats
+│
+│── test/                     # Unit tests
+│   └── test_chat.py          # Example test case
+│
+│── .env                      # Environment variables
+│── .gitignore                # Ignored files for Git
+│── Dockerfile                # Containerization for backend
+│── Procfile                  # Deployment file (Heroku/Railway)
+│── README.md                 # Documentation
+│── render.yaml               # Render deployment config
+│── requirements.txt          # Python dependencies
+│── run.py                    # Alternative entrypoint
+
 ```
 
 ---
