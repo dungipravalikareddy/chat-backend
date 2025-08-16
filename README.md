@@ -1,9 +1,3 @@
-Got it 👍 You need a **detailed README.md** for your backend (FastAPI app).
-Here’s a production-ready `README.md` you can drop inside your `chat-backend/` folder:
-
----
-
-```markdown
 # 🧠 Chat Backend (FastAPI)
 
 This is the **backend service** for the Chat App, built with **FastAPI**.  
@@ -37,30 +31,29 @@ It provides authentication, chat handling with multiple personas, history manage
 ## 📂 Project Structure
 
 ```
-
 chat-backend/
 │── app/
-│   ├── main.py                # FastAPI entrypoint
+│   ├── main.py                 # FastAPI entrypoint
 │   ├── core/
-│   │   ├── auth.py            # JWT auth & password utils
-│   │   └── config.py          # Config & constants (personas, settings)
+│   │   ├── auth.py             # JWT auth & password utils
+│   │   └── config.py           # Config & constants (personas, settings)
 │   ├── services/
-│   │   ├── chat\_service.py    # Chat logic + history
-│   │   └── analytics\_service.py # Analytics summary
+│   │   ├── chat_service.py     # Chat logic + history
+│   │   └── analytics_service.py # Analytics summary
 │   ├── endpoints/
-│   │   ├── auth.py            # /auth routes
-│   │   ├── chat.py            # /chat routes
-│   │   └── analytics.py       # /analytics routes
-│   └── **init**.py
+│   │   ├── auth.py             # /auth routes
+│   │   ├── chat.py             # /chat routes
+│   │   └── analytics.py        # /analytics routes
+│   └── __init__.py
 │
 │── data/
-│   └── chat\_logs.json         # Stored chats (auto-created)
+│   └── chat_logs.json          # Stored chats (auto-created)
 │
 │── requirements.txt
 │── Dockerfile
-│── README.md                  # (this file)
-
-````
+│── docker-compose.yml
+│── README.md                   # (this file)
+```
 
 ---
 
@@ -71,7 +64,7 @@ chat-backend/
 ```bash
 git clone https://github.com/yourusername/chat-backend.git
 cd chat-backend
-````
+```
 
 ### 2. Create virtual environment
 
@@ -136,6 +129,9 @@ Now visit 👉 [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) for inte
   GET /api/v1/auth/me
   ```
 
+🚨 Currently uses a **dummy user store** (`fake_users_db`).  
+Replace with a real DB in production.
+
 ---
 
 ## 💬 Chat Endpoints
@@ -154,6 +150,14 @@ Now visit 👉 [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) for inte
     "persona": "Tutor",
     "history": [],
     "temperature": 0.7
+  }
+  ```
+
+  Example response:
+
+  ```json
+  {
+    "reply": "E=mc^2 means energy equals mass times the speed of light squared..."
   }
   ```
 
@@ -204,7 +208,20 @@ docker build -t chat-backend .
 docker run -d -p 8000:8000 chat-backend
 ```
 
-Now backend is live at [http://localhost:8000](http://localhost:8000).
+Backend is live at [http://localhost:8000](http://localhost:8000).
+
+---
+
+## 🐳 Docker Compose (Frontend + Backend)
+
+If you have both frontend (Streamlit) and backend:
+
+```bash
+docker-compose up --build
+```
+
+- Backend → [http://localhost:8000](http://localhost:8000)  
+- Frontend → [http://localhost:8501](http://localhost:8501)
 
 ---
 
@@ -216,7 +233,6 @@ The backend is live on:
 - **Render** → [https://chat-backend-qrmn.onrender.com/docs#/](https://chat-backend-qrmn.onrender.com/docs#/)
 
 📌 Both provide the full interactive **Swagger UI** where you can test all endpoints.
-
 
 ---
 
@@ -240,16 +256,16 @@ Password: password123
 
 Available personas:
 
-* **Default** → Helpful assistant
-* **Tutor** → Step-by-step explanations
-* **Therapist** → Supportive, empathetic coach
+* **Default** → Helpful assistant  
+* **Tutor** → Step-by-step explanations  
+* **Therapist** → Supportive, empathetic coach  
 
 ---
 
 ## 📌 Notes
 
-* Uses a JSON file for storage (`data/chat_logs.json`).
-* Replace with real DB (Postgres/MongoDB) in production.
-* Authentication currently uses a **dummy user store** (fake\_users\_db).
+* Uses a JSON file for storage (`data/chat_logs.json`).  
+* Replace with real DB (Postgres/MongoDB) in production.  
+* Authentication currently uses a **dummy user store** (`fake_users_db`).  
 
-
+---
