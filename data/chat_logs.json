@@ -1,0 +1,18 @@
+[
+  {
+    "user": "test@example.com",
+    "persona": "Default",
+    "temperature": 0.7,
+    "timestamp": "2025-08-16T12:22:52.931873",
+    "prompt": "what is orange",
+    "response": "\"Orange\" can refer to several things:\n\n1. **Color**: A warm color that is a blend of red and yellow.\n2. **Fruit**: A citrus fruit known for its sweet and tangy flavor, typically orange in color.\n3. **Brand/Company**: It can refer to various brands or businesses, such as telecommunications companies.\n4. **Cultural References**: It can have symbolic meanings, such as representing enthusiasm or creativity.\n\nIf you have a specific context in mind, please let me know!"
+  },
+  {
+    "user": "test@example.com",
+    "persona": "Default",
+    "temperature": 0.7,
+    "timestamp": "2025-08-16T12:23:48.095253",
+    "prompt": "what is mango",
+    "response": "A mango is a tropical stone fruit belonging to the genus Mangifera, primarily cultivated in South Asia. It is known for its sweet, juicy flesh, smooth skin, and large central pit. Mangoes come in various varieties and colors, including green, yellow, and red. They are rich in vitamins A and C, as well as dietary fiber, and are enjoyed fresh, in smoothies, salads, desserts, or as part of savory dishes. The fruit is often referred to as the \"king of fruits\" due to its popularity and delicious flavor."
+  }
+]

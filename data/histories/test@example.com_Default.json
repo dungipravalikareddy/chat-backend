@@ -1,0 +1,14 @@
+[
+  {
+    "role": "system",
+    "content": "string"
+  },
+  {
+    "role": "user",
+    "content": "what is mango"
+  },
+  {
+    "role": "assistant",
+    "content": "A mango is a tropical stone fruit belonging to the genus Mangifera, primarily cultivated in South Asia. It is known for its sweet, juicy flesh, smooth skin, and large central pit. Mangoes come in various varieties and colors, including green, yellow, and red. They are rich in vitamins A and C, as well as dietary fiber, and are enjoyed fresh, in smoothies, salads, desserts, or as part of savory dishes. The fruit is often referred to as the \"king of fruits\" due to its popularity and delicious flavor."
+  }
+]
