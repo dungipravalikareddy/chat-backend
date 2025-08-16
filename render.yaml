@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: chat-backend
+    env: python
+    plan: free
+    region: oregon
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port 10000"
+    envVars:
+      - key: SECRET_KEY
+        value: "e277a38fa5c1acf3a9107079402770f9b667fabf000903b20cc2003f1ca56c05"
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: "30"
+      - key: ALGORITHM
+        value: "HS256"

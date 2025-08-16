@@ -5,3 +5,5 @@ pydantic-settings>=2.2
 requests>=2.32
 backoff>=2.2
 python-dotenv>=1.0
+python-jose[cryptography]
+passlib[bcrypt]
