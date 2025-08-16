@@ -14,5 +14,45 @@
     "timestamp": "2025-08-16T12:23:48.095253",
     "prompt": "what is mango",
     "response": "A mango is a tropical stone fruit belonging to the genus Mangifera, primarily cultivated in South Asia. It is known for its sweet, juicy flesh, smooth skin, and large central pit. Mangoes come in various varieties and colors, including green, yellow, and red. They are rich in vitamins A and C, as well as dietary fiber, and are enjoyed fresh, in smoothies, salads, desserts, or as part of savory dishes. The fruit is often referred to as the \"king of fruits\" due to its popularity and delicious flavor."
+  },
+  {
+    "user": "test@example.com",
+    "persona": "Tutor",
+    "temperature": 0.7,
+    "timestamp": "2025-08-16T15:16:06.982188",
+    "prompt": "Hi",
+    "response": "Hello! How can I assist you today? If you have any questions or topics you'd like to learn about, feel free to share!"
+  },
+  {
+    "user": "test@example.com",
+    "persona": "Tutor",
+    "temperature": 0.7,
+    "timestamp": "2025-08-16T15:16:23.570392",
+    "prompt": "what is ai in two lines",
+    "response": "Artificial Intelligence (AI) refers to the simulation of human intelligence in machines that are programmed to think and learn like humans. It can perform tasks such as problem-solving, understanding natural language, and recognizing patterns."
+  },
+  {
+    "user": "test@example.com",
+    "persona": "Default",
+    "temperature": 0.7,
+    "timestamp": "2025-08-16T15:27:59.470334",
+    "prompt": "Hi",
+    "response": "Hello! How can I assist you today?"
+  },
+  {
+    "user": "test@example.com",
+    "persona": "Default",
+    "temperature": 0.7,
+    "timestamp": "2025-08-16T15:28:12.477825",
+    "prompt": "what is mango",
+    "response": "A mango is a tropical fruit from the genus Mangifera, specifically the species Mangifera indica. Known for its sweet, juicy flesh and vibrant colors, mangoes are typically yellow, orange, or red when ripe. They have a smooth skin and a large pit in the center. Mangoes are rich in vitamins A and C, fiber, and antioxidants, making them a nutritious choice. They can be eaten fresh, added to smoothies, salads, and desserts, or used in savory dishes and sauces. Mangoes are often referred to as the \"king of fruits\" due to their popularity and flavor."
+  },
+  {
+    "user": "test@example.com",
+    "persona": "Default",
+    "temperature": 0.7,
+    "timestamp": "2025-08-16T15:32:05.709139",
+    "prompt": "what is mango",
+    "response": "A mango is a tropical fruit that comes from the mango tree, scientifically known as Mangifera indica. It is characterized by its sweet and juicy flesh, which can range in color from yellow to orange to red, depending on the variety. Mangoes have a smooth, thin skin and a large pit in the center. They are rich in vitamins A and C, fiber, and antioxidants.\n\nMangoes are enjoyed fresh, in smoothies, salads, desserts, and savory dishes, and are often referred to as the \"king of fruits\" due to their popularity and delicious flavor. They are widely cultivated in tropical and subtropical regions around the world."
   }
 ]

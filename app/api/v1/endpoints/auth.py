@@ -11,9 +11,16 @@ fake_users_db = {
     "test@example.com": {
         "email": "test@example.com",
         "hashed_password": get_password_hash("password123"),
+    },
+    "alice@example.com": {
+        "email": "alice@example.com",
+        "hashed_password": get_password_hash("alicepass"),
+    },
+    "bob@example.com": {
+        "email": "bob@example.com",
+        "hashed_password": get_password_hash("bobpass123"),
     }
 }
-
 class LoginRequest(BaseModel):
     username: str
     password: str
