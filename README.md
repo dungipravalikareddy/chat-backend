@@ -241,20 +241,22 @@ docker run -d -p 8000:8000 chat-backend
 
 Backend is live at [http://localhost:8000](http://localhost:8000).
 
----
+### Useful Docker Commands
+# List running containers
+docker ps
 
-## 🐳 Docker Compose (Frontend + Backend)
+# View container logs (live stream)
+docker logs -f <container_id_or_name>
 
-If you have both frontend (Streamlit) and backend:
+# Example
+docker logs -f priceless_stonebraker
 
-```bash
-docker-compose up --build
-```
+# Stop a running container
+docker stop <container_id_or_name>
 
-- Backend → [http://localhost:8000](http://localhost:8000)  
-- Frontend → [http://localhost:8501](http://localhost:8501)
+# Example
+docker stop priceless_stonebraker
 
----
 
 ## ☁️ Cloud Deployment
 
